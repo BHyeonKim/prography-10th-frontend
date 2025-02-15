@@ -13,6 +13,7 @@ const RegistrationLayout = () => {
 	const { pathname } = useLocation();
 	const tokenizedPathname = pathname.split('/');
 	const currentStep = Number(tokenizedPathname[tokenizedPathname.length - 1]);
+	const isLastStep = currentStep === TOTAL_STEP;
 
 	const handlePrevButton = async () => {
 		if (currentStep <= 1) return;
@@ -27,11 +28,14 @@ const RegistrationLayout = () => {
 			return;
 		}
 
-		if (currentStep === TOTAL_STEP) {
+		if (isLastStep) {
+			// 폼데이터 전송
+
 			await navigate('/complete');
-		} else {
-			await navigate(`/registration/${currentStep + 1}`);
+			return;
 		}
+
+		await navigate(`/registration/${currentStep + 1}`);
 	};
 
 	return (
@@ -45,7 +49,9 @@ const RegistrationLayout = () => {
 				<GeneralButton buttonStyle="mono" onClick={handlePrevButton}>
 					뒤로
 				</GeneralButton>
-				<GeneralButton onClick={handleNextButton}>다음</GeneralButton>
+				<GeneralButton onClick={handleNextButton}>
+					{isLastStep ? '제출하기' : '다음'}
+				</GeneralButton>
 			</div>
 		</div>
 	);
