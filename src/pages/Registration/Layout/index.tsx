@@ -1,10 +1,11 @@
 import { Outlet, useLocation, useNavigate } from 'react-router';
 import GeneralButton from '../../../shared/ui/button/GeneralButton';
+import Header from '../../../widgets/Header';
 import ProgressBar from '../../../widgets/ProgressBar';
 import useRootStore from '../../../zustand';
 import styles from './layout.module.css';
 
-const TOTAL_STEP = 4;
+const TOTAL_STEP = 3;
 
 const RegistrationLayout = () => {
 	const grantedStep = useRootStore((state) => state.step);
@@ -27,7 +28,7 @@ const RegistrationLayout = () => {
 		}
 
 		if (currentStep === TOTAL_STEP) {
-			await navigate('/registration/complete');
+			await navigate('/complete');
 		} else {
 			await navigate(`/registration/${currentStep + 1}`);
 		}
@@ -35,6 +36,7 @@ const RegistrationLayout = () => {
 
 	return (
 		<div className={styles.registrationLayout}>
+			<Header>Prography 10기 지원서</Header>
 			<ProgressBar currentStep={currentStep} totalStep={TOTAL_STEP} />
 			<main className={styles.outlet}>
 				<Outlet />
