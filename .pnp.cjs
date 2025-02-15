@@ -38,7 +38,8 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:9610facdd04b5c072261cf3f3175469b647b1f7fb76b45b3aa25f977eafbe66cc49b2b9e91737e2a26a7349827c2b2d30b6dad5dc2d57b9aff03b8261906f401#npm:19.0.0"],\
           ["react-router", "virtual:9610facdd04b5c072261cf3f3175469b647b1f7fb76b45b3aa25f977eafbe66cc49b2b9e91737e2a26a7349827c2b2d30b6dad5dc2d57b9aff03b8261906f401#npm:7.1.5"],\
           ["typescript", "patch:typescript@npm%3A5.7.3#optional!builtin<compat/typescript>::version=5.7.3&hash=5786d5"],\
-          ["vite", "virtual:9610facdd04b5c072261cf3f3175469b647b1f7fb76b45b3aa25f977eafbe66cc49b2b9e91737e2a26a7349827c2b2d30b6dad5dc2d57b9aff03b8261906f401#npm:6.1.0"]\
+          ["vite", "virtual:9610facdd04b5c072261cf3f3175469b647b1f7fb76b45b3aa25f977eafbe66cc49b2b9e91737e2a26a7349827c2b2d30b6dad5dc2d57b9aff03b8261906f401#npm:6.1.0"],\
+          ["zustand", "virtual:9610facdd04b5c072261cf3f3175469b647b1f7fb76b45b3aa25f977eafbe66cc49b2b9e91737e2a26a7349827c2b2d30b6dad5dc2d57b9aff03b8261906f401#npm:5.0.3"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -1872,7 +1873,8 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:9610facdd04b5c072261cf3f3175469b647b1f7fb76b45b3aa25f977eafbe66cc49b2b9e91737e2a26a7349827c2b2d30b6dad5dc2d57b9aff03b8261906f401#npm:19.0.0"],\
           ["react-router", "virtual:9610facdd04b5c072261cf3f3175469b647b1f7fb76b45b3aa25f977eafbe66cc49b2b9e91737e2a26a7349827c2b2d30b6dad5dc2d57b9aff03b8261906f401#npm:7.1.5"],\
           ["typescript", "patch:typescript@npm%3A5.7.3#optional!builtin<compat/typescript>::version=5.7.3&hash=5786d5"],\
-          ["vite", "virtual:9610facdd04b5c072261cf3f3175469b647b1f7fb76b45b3aa25f977eafbe66cc49b2b9e91737e2a26a7349827c2b2d30b6dad5dc2d57b9aff03b8261906f401#npm:6.1.0"]\
+          ["vite", "virtual:9610facdd04b5c072261cf3f3175469b647b1f7fb76b45b3aa25f977eafbe66cc49b2b9e91737e2a26a7349827c2b2d30b6dad5dc2d57b9aff03b8261906f401#npm:6.1.0"],\
+          ["zustand", "virtual:9610facdd04b5c072261cf3f3175469b647b1f7fb76b45b3aa25f977eafbe66cc49b2b9e91737e2a26a7349827c2b2d30b6dad5dc2d57b9aff03b8261906f401#npm:5.0.3"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -2388,6 +2390,36 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "../../.yarn/berry/cache/yallist-npm-5.0.0-8732dd9f1c-10c0.zip/node_modules/yallist/",\
         "packageDependencies": [\
           ["yallist", "npm:5.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["zustand", [\
+      ["npm:5.0.3", {\
+        "packageLocation": "../../.yarn/berry/cache/zustand-npm-5.0.3-6b60927ae4-10c0.zip/node_modules/zustand/",\
+        "packageDependencies": [\
+          ["zustand", "npm:5.0.3"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:9610facdd04b5c072261cf3f3175469b647b1f7fb76b45b3aa25f977eafbe66cc49b2b9e91737e2a26a7349827c2b2d30b6dad5dc2d57b9aff03b8261906f401#npm:5.0.3", {\
+        "packageLocation": "./.yarn/__virtual__/zustand-virtual-5336436aea/3/.yarn/berry/cache/zustand-npm-5.0.3-6b60927ae4-10c0.zip/node_modules/zustand/",\
+        "packageDependencies": [\
+          ["zustand", "virtual:9610facdd04b5c072261cf3f3175469b647b1f7fb76b45b3aa25f977eafbe66cc49b2b9e91737e2a26a7349827c2b2d30b6dad5dc2d57b9aff03b8261906f401#npm:5.0.3"],\
+          ["@types/immer", null],\
+          ["@types/react", "npm:19.0.8"],\
+          ["@types/use-sync-external-store", null],\
+          ["immer", null],\
+          ["react", "npm:19.0.0"],\
+          ["use-sync-external-store", null]\
+        ],\
+        "packagePeers": [\
+          "@types/immer",\
+          "@types/react",\
+          "@types/use-sync-external-store",\
+          "immer",\
+          "react",\
+          "use-sync-external-store"\
         ],\
         "linkType": "HARD"\
       }]\
