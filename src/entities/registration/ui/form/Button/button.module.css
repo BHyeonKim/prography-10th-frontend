@@ -28,5 +28,6 @@
 
 	&:has(input:checked) {
 		border-color: var(--blue);
+		background-color: var(--skyblue);
 	}
 }

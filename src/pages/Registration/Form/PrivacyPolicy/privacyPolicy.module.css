@@ -12,4 +12,9 @@
 	& label + label {
 		margin-top: 10px;
 	}
+
+	& .required::after {
+		content: "*";
+		color: red;
+	}
 }

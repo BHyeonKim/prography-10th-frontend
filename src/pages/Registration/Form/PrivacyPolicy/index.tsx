@@ -17,7 +17,9 @@ const PrivacyPolicyForm = () => {
 					<p>수집 항목: 이름, 이메일, 핸드폰번호, 학교 정보 및 직장 정보</p>
 					<p>보유 및 이용 기간: 리쿠르팅 과정 종료일(3월 7일) 이후 파기</p>
 				</div>
-				<p>개인정보 수집여부 동의 여부를 체크해주세요.✨</p>
+				<p className={styles.required}>
+					개인정보 수집여부 동의 여부를 체크해주세요.
+				</p>
 				<fieldset>
 					<Button name="privacy" value="true">
 						개인정보 수집에 동의합니다.
