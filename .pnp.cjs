@@ -32,6 +32,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:19.0.8"],\
           ["@types/react-dom", "virtual:9610facdd04b5c072261cf3f3175469b647b1f7fb76b45b3aa25f977eafbe66cc49b2b9e91737e2a26a7349827c2b2d30b6dad5dc2d57b9aff03b8261906f401#npm:19.0.3"],\
           ["@vitejs/plugin-react", "virtual:9610facdd04b5c072261cf3f3175469b647b1f7fb76b45b3aa25f977eafbe66cc49b2b9e91737e2a26a7349827c2b2d30b6dad5dc2d57b9aff03b8261906f401#npm:4.3.4"],\
+          ["clsx", "npm:2.1.1"],\
           ["globals", "npm:15.15.0"],\
           ["react", "npm:19.0.0"],\
           ["react-dom", "virtual:9610facdd04b5c072261cf3f3175469b647b1f7fb76b45b3aa25f977eafbe66cc49b2b9e91737e2a26a7349827c2b2d30b6dad5dc2d57b9aff03b8261906f401#npm:19.0.0"],\
@@ -1168,6 +1169,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["clsx", [\
+      ["npm:2.1.1", {\
+        "packageLocation": "../../.yarn/berry/cache/clsx-npm-2.1.1-96125b98be-10c0.zip/node_modules/clsx/",\
+        "packageDependencies": [\
+          ["clsx", "npm:2.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["color-convert", [\
       ["npm:2.0.1", {\
         "packageLocation": "../../.yarn/berry/cache/color-convert-npm-2.0.1-79730e935b-10c0.zip/node_modules/color-convert/",\
@@ -1856,6 +1866,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:19.0.8"],\
           ["@types/react-dom", "virtual:9610facdd04b5c072261cf3f3175469b647b1f7fb76b45b3aa25f977eafbe66cc49b2b9e91737e2a26a7349827c2b2d30b6dad5dc2d57b9aff03b8261906f401#npm:19.0.3"],\
           ["@vitejs/plugin-react", "virtual:9610facdd04b5c072261cf3f3175469b647b1f7fb76b45b3aa25f977eafbe66cc49b2b9e91737e2a26a7349827c2b2d30b6dad5dc2d57b9aff03b8261906f401#npm:4.3.4"],\
+          ["clsx", "npm:2.1.1"],\
           ["globals", "npm:15.15.0"],\
           ["react", "npm:19.0.0"],\
           ["react-dom", "virtual:9610facdd04b5c072261cf3f3175469b647b1f7fb76b45b3aa25f977eafbe66cc49b2b9e91737e2a26a7349827c2b2d30b6dad5dc2d57b9aff03b8261906f401#npm:19.0.0"],\
