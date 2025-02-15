@@ -1,11 +1,13 @@
 import { Outlet, useLocation, useNavigate } from 'react-router';
 import GeneralButton from '../../../shared/ui/button/GeneralButton';
 import ProgressBar from '../../../widgets/ProgressBar';
+import useRootStore from '../../../zustand';
 import styles from './layout.module.css';
 
-const TOTAL_STEP = 3;
+const TOTAL_STEP = 4;
 
 const RegistrationLayout = () => {
+	const grantedStep = useRootStore((state) => state.step);
 	const navigate = useNavigate();
 	const { pathname } = useLocation();
 	const tokenizedPathname = pathname.split('/');
@@ -19,6 +21,10 @@ const RegistrationLayout = () => {
 
 	const handleNextButton = async () => {
 		if (currentStep > TOTAL_STEP) return;
+		if (currentStep >= grantedStep) {
+			alert('필수 입력항목을 입력해주세요.');
+			return;
+		}
 
 		if (currentStep === TOTAL_STEP) {
 			await navigate('/registration/complete');

@@ -2,16 +2,17 @@ import clsx from 'clsx';
 import type { HTMLAttributes, InputHTMLAttributes } from 'react';
 import styles from './button.module.css';
 
-type ButtonProps = HTMLAttributes<HTMLLabelElement> &
-	Pick<InputHTMLAttributes<HTMLInputElement>, 'checked' | 'name' | 'value'>;
+type ButtonProps = InputHTMLAttributes<HTMLInputElement> & {
+	children?: string;
+};
 
-const Button = ({ name, checked, value, ...props }: ButtonProps) => {
+const Button = ({ checked, children, ...props }: ButtonProps) => {
 	return (
 		<label className={clsx(styles.buttonContainer, checked && styles.active)}>
 			<div>
-				<input type="radio" name={name} checked={checked} value={value} />
+				<input type="radio" {...props} />
 			</div>
-			<p>{props.children}</p>
+			<p>{children}</p>
 		</label>
 	);
 };
