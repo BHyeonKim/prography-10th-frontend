@@ -1,0 +1,12 @@
+.generalInput {
+	height: 38px;
+	width: 100%;
+	border: 1px solid var(--gray-secondary);
+	border-radius: 5px;
+	padding: 0 10px;
+	background-color: var(--skyblue);
+
+	&::placeholder {
+		color: var(--gray-secondary);
+	}
+}
