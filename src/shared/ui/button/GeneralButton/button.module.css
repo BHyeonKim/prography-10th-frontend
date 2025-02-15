@@ -1,0 +1,18 @@
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+	height: 32px;
+	color: var(--white);
+	background-color: var(--blue);
+	padding: 0 22px;
+	border: 0;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.mono {
+	background-color: var(--gray-secondary);
+	color: var(--gray-primary);
+}
