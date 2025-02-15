@@ -51,7 +51,7 @@ const WelcomePage = () => {
 					🔗 인스타그램
 				</WelcomeComponent.WelcomeLink>
 			</section>
-			<ApplyButton to="/registration">지원하기</ApplyButton>
+			<ApplyButton to="/registration/1">지원하기</ApplyButton>
 		</main>
 	);
 };

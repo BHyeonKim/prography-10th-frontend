@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router';
+import { Navigate, Route, Routes } from 'react-router';
 import CompletePage from './pages/Compelete';
 import AdditionalInfoForm from './pages/Registration/Form/AdditionalInfo';
 import BasicInfoForm from './pages/Registration/Form/BasicInfo';
@@ -11,7 +11,8 @@ function App() {
 		<Routes>
 			<Route index element={<WelcomePage />} />
 			<Route path="registration" element={<RegistrationLayout />}>
-				<Route index path="1" element={<PrivacyPolicyForm />} />
+				<Route index element={<Navigate to="1" />} />
+				<Route path="1" element={<PrivacyPolicyForm />} />
 				<Route path="2" element={<BasicInfoForm />} />
 				<Route path="3" element={<AdditionalInfoForm />} />
 			</Route>
