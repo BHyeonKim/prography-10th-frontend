@@ -1,0 +1,17 @@
+.privacyPolicyForm {
+	padding: 20px 18px;
+
+	& > .formContainer {
+		margin: 10px 0;
+		border: 1px solid var(--gray-secondary);
+		border-radius: 8px;
+		padding: 20px;
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+
+		& label + label {
+			margin-top: 10px;
+		}
+	}
+}
