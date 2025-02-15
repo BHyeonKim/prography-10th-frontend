@@ -1,0 +1,8 @@
+.basicInfo {
+	padding: 20px 18px;
+
+	& .required::after {
+		content: "*";
+		color: red;
+	}
+}
