@@ -1,0 +1,18 @@
+.ball {
+	--ball-width: 34px;
+
+	width: var(--ball-width);
+	height: var(--ball-width);
+	background-color: var(--gray-secondary);
+	color: var(--gray-primary);
+	border-radius: calc(var(--ball-width) / 2);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 500;
+}
+
+.active {
+	background-color: var(--blue);
+	color: var(--white);
+}

@@ -1,0 +1,18 @@
+.progressBar {
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	justify-content: stretch;
+	align-items: center;
+}
+
+.connector {
+	flex-grow: 1;
+	height: 4px;
+	background-color: var(--gray-secondary);
+
+	&[data-active="true"] {
+		background-color: var(--blue);
+	}
+	margin: 0 2px;
+}
