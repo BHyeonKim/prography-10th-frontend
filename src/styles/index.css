@@ -1,2 +1,7 @@
 @import "./reset.css";
 @import "./font.css";
+@import "./constants";
+
+* {
+	font-family: "pretendard", sans-serif;
+}
