@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
 import {
 	type AdditionalInfoFormSlice,
 	createAdditionalInfoFormSlice,
@@ -21,11 +22,16 @@ const useRootStore = create<
 		BasicInfoFormSlice &
 		AdditionalInfoFormSlice &
 		FormStepSlice
->()((...a) => ({
-	...createPrivacyPolicyFormSlice(...a),
-	...createBasicInfoFormSlice(...a),
-	...createAdditionalInfoFormSlice(...a),
-	...createFormStepSlice(...a),
-}));
+>()(
+	persist(
+		(...a) => ({
+			...createPrivacyPolicyFormSlice(...a),
+			...createBasicInfoFormSlice(...a),
+			...createAdditionalInfoFormSlice(...a),
+			...createFormStepSlice(...a),
+		}),
+		{ name: 'form-store' },
+	),
+);
 
 export default useRootStore;
