@@ -4,8 +4,12 @@ import styles from './paragraph.module.css';
 export type ParagraphProps = HTMLAttributes<HTMLParagraphElement>;
 
 const Paragraph = ({ children, ...props }: ParagraphProps) => {
+	const classNames = props.className
+		? `${styles.paragraph} ${props.className ?? ''}`
+		: styles.paragraph;
+
 	return (
-		<p className={styles.paragraph} {...props}>
+		<p {...props} className={classNames}>
 			{children}
 		</p>
 	);
