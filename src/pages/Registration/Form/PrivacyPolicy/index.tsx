@@ -1,4 +1,5 @@
 import Button from '../../../../entities/registration/ui/form/Button';
+import FormContainer from '../../../../shared/ui/container/FormContainer';
 import Divider from '../../../../shared/ui/divider';
 import Typography from '../../../../shared/ui/typographies';
 
@@ -10,8 +11,8 @@ const PrivacyPolicyForm = () => {
 			<Typography.Subtitle>개인정보 수집 동의</Typography.Subtitle>
 			<Divider />
 			<p>프로그라피 10기 지원을 위한 개인정보 수집에 대한 동의가 필요합니다</p>
-			<div className={styles.formContainer}>
-				<div>
+			<FormContainer>
+				<div className={styles.notice}>
 					<p>수집 목적: Prography 10기 리구르팅 과정 및 결과 안내</p>
 					<p>수집 항목: 이름, 이메일, 핸드폰번호, 학교 정보 및 직장 정보</p>
 					<p>보유 및 이용 기간: 리쿠르팅 과정 종료일(3월 7일) 이후 파기</p>
@@ -25,7 +26,7 @@ const PrivacyPolicyForm = () => {
 						개인정보 수집에 동의합니다.
 					</Button>
 				</fieldset>
-			</div>
+			</FormContainer>
 		</div>
 	);
 };
