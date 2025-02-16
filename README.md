@@ -1,50 +1,27 @@
-# React + TypeScript + Vite
+# prography-10th-frontend 과제
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### 배포 URL 
+> [prography-10th-frontend](https://prography-10th-frontend.onrender.com/) (오랫동안 접속 안하면 서버가 꺼져서 50초 이상 걸릴 수 있습니다.🥲)
 
-Currently, two official plugins are available:
+#### 로컬 실행방법
+> yarn run dev
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 주안점
 
-## Expanding the ESLint configuration
+### FSD (Featured Slice Design)
+모듈식 아키텍처 대신 FSD 아키텍처를 구현하려고 노력했습니다.
+초반에 형식을 갖추느라 시간이 오래걸렸는데, 개발 후반으로 갈수록 개발속도가 빨라지는 것을 느낄 수 있었습니다.
+다만 하나의 컴포넌트가 어느 레이어나 슬라이스에 들어가는지 고민하는 시간이 개발 시간과 맞먹고 아키텍처 구조에 확신이 안가서 개발 끝까지 FSD 아키텍처를 지킬 수 없었습니다.
+더 FSD 아키텍처 예제를 찾아보며 공부해야겠습니다.😅
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Zero Install
+Yarn PnP의 Zero Install을 적용해서 배포시간 단축을 꾀했습니다.
 
-- Configure the top-level `parserOptions` property like this:
+[Feature-Sliced Design](https://feature-sliced.design/kr/)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 개발환경
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- Language : TS
+- Styling : CSS Module
+- Library : React, React Router, Zustand, clsx
+- Lint : biome
