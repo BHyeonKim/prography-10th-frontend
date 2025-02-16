@@ -14,6 +14,7 @@ export type Major =
 export interface AdditionalInfoFormSlice {
 	major?: Major;
 	setMajor: (major: Major) => void;
+	resetMajor: () => void;
 }
 
 const INITIAL_STATE = {
@@ -31,4 +32,5 @@ export const createAdditionalInfoFormSlice: StateCreator<
 > = (set) => ({
 	...INITIAL_STATE,
 	setMajor: (major) => set(() => ({ major, step: 4 })),
+	resetMajor: () => set(() => ({ ...INITIAL_STATE })),
 });

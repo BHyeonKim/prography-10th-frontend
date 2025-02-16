@@ -5,6 +5,7 @@ import type { PrivacyPolicyFormSlice } from './PrivacyPolicyFormSlice';
 
 export interface FormStepSlice {
 	step: number;
+	resetStep: () => void;
 }
 
 const INITIAL_STATE = {
@@ -19,6 +20,7 @@ export const createFormStepSlice: StateCreator<
 	[],
 	[],
 	FormStepSlice
-> = () => ({
+> = (set) => ({
 	...INITIAL_STATE,
+	resetStep: () => set(() => ({ ...INITIAL_STATE })),
 });

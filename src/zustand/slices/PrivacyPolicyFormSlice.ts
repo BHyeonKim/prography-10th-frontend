@@ -6,6 +6,7 @@ import type { FormStepSlice } from './FormStepSlice';
 export interface PrivacyPolicyFormSlice {
 	granted?: boolean;
 	setGrant: (isGranted: boolean) => void;
+	resetGrant: () => void;
 }
 
 const INITIAL_STATE = {
@@ -23,4 +24,5 @@ export const createPrivacyPolicyFormSlice: StateCreator<
 > = (set) => ({
 	...INITIAL_STATE,
 	setGrant: (isGranted) => set(() => ({ granted: isGranted, step: 2 })),
+	resetGrant: () => set(() => ({ ...INITIAL_STATE })),
 });

@@ -8,7 +8,13 @@ import styles from './layout.module.css';
 const TOTAL_STEP = 3;
 
 const RegistrationLayout = () => {
-	const grantedStep = useRootStore((state) => state.step);
+	const {
+		step: grantedStep,
+		resetBasicInfo,
+		resetGrant,
+		resetMajor,
+		resetStep,
+	} = useRootStore((state) => state);
 	const navigate = useNavigate();
 	const { pathname } = useLocation();
 	const tokenizedPathname = pathname.split('/');
@@ -29,7 +35,11 @@ const RegistrationLayout = () => {
 		}
 
 		if (isLastStep) {
-			// 폼데이터 전송
+			// 폼데이터 전송 후 폼데이터 초기화
+			resetGrant();
+			resetBasicInfo();
+			resetMajor();
+			resetStep();
 
 			await navigate('/complete');
 			return;

@@ -10,6 +10,7 @@ export interface BasicInfoFormSlice {
 	setName: (value: string) => void;
 	setEmail: (value: string) => void;
 	setPhone: (value: string) => void;
+	resetBasicInfo: () => void;
 }
 
 const INITIAL_STATE = {
@@ -55,4 +56,5 @@ export const createBasicInfoFormSlice: StateCreator<
 				step: isAllFieldsFilled ? 3 : 2,
 			};
 		}),
+	resetBasicInfo: () => set(() => ({ ...INITIAL_STATE })),
 });
