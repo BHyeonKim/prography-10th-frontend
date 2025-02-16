@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import type { HTMLAttributes, InputHTMLAttributes } from 'react';
+import type { InputHTMLAttributes } from 'react';
 import styles from './button.module.css';
 
 type ButtonProps = InputHTMLAttributes<HTMLInputElement> & {

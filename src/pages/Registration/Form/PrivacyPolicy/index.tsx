@@ -45,7 +45,7 @@ const PrivacyPolicyForm = () => {
 						name="privacy"
 						value="false"
 						onClick={handleSelect}
-						defaultChecked={!granted}
+						defaultChecked={granted === false}
 					>
 						개인정보 수집에 동의합니다.
 					</Button>
