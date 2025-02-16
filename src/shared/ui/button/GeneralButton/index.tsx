@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import type { HTMLAttributes } from 'react';
 import styles from './button.module.css';
 
@@ -10,10 +11,11 @@ const GeneralButton = ({
 	buttonStyle = 'default',
 	...props
 }: GeneralButtonProps) => {
-	const classNames = `${styles.button} ${buttonStyle === 'mono' ? styles.mono : ''}`;
-
 	return (
-		<button {...props} className={classNames}>
+		<button
+			{...props}
+			className={clsx(styles.button, buttonStyle === 'mono' && styles.mono)}
+		>
 			{children}
 		</button>
 	);

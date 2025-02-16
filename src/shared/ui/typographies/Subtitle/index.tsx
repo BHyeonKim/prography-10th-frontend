@@ -1,15 +1,12 @@
+import clsx from 'clsx';
 import type { HTMLAttributes } from 'react';
 import styles from './subTitle.module.css';
 
 export type SubtitleProps = HTMLAttributes<HTMLHeadingElement>;
 
 const Subtitle = ({ children, ...props }: SubtitleProps) => {
-	const classNames = props.className
-		? `${styles.subTitle} ${props.className ?? ''}`
-		: styles.subTitle;
-
 	return (
-		<h2 {...props} className={classNames}>
+		<h2 {...props} className={clsx(styles.subTitle, props.className)}>
 			{children}
 		</h2>
 	);
