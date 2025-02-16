@@ -8,10 +8,9 @@
 	gap: 40px;
 
 	& .section {
-		text-align: center;
-
-		& *:nth-child(n):not(& > *:first-child) {
-			margin-top: 14px;
-		}
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+		align-items: center;
 	}
 }
