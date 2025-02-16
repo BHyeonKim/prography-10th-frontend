@@ -1,5 +1,8 @@
 # prography-10th-frontend 과제
 
+![prography-10th-frontend onrender com_ (1)](https://github.com/user-attachments/assets/5b45f473-8501-46b6-a70a-71c90c8f29c6)
+
+
 #### 배포 URL 
 > [prography-10th-frontend](https://prography-10th-frontend.onrender.com/) (오랫동안 접속 안하면 서버가 꺼져서 50초 이상 걸릴 수 있습니다.🥲)
 
